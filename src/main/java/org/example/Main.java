@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -15,61 +16,196 @@ public class Main {
 
         System.out.println("\nWelcome to The Paint Calculator, we will calculate the amount of paint needed for your next job!");
 
-        // Ask the user for the number of walls and dimensions to find the area
+        // Ask the user for the number of walls and dimensions, catching any input errors
+        int walls;
         Scanner reader = new Scanner(System.in);
-        System.out.println("What is the total number of walls that need to be painted?");
-        String walls = reader.next();
-        int wallsInt = Integer.parseInt(walls);
 
-        System.out.println("What is the height of the walls in mm?");
-        String wallHeight = reader.next();
-        int wallHeightInt = Integer.parseInt(wallHeight);
+        while (true) {
+            try {
 
-        System.out.println("What is the width of the walls in mm?");
-        String wallWidth = reader.next();
-        int wallWidthInt = Integer.parseInt(wallWidth);
+                System.out.println("What is the total number of walls that need to be painted?");
+                walls = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
 
-        //Ask the user for the number of doors and dimensions to find the area
-        System.out.println("What is the total number of doors in the rooms that need to be painted?");
-        String doors = reader.next();
-        int doorsInt = Integer.parseInt(doors);
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
 
-        System.out.println("What is the height of the doors in mm?");
-        String doorHeight = reader.next();
-        int doorHeightInt = Integer.parseInt(doorHeight);
+        int wallHeight;
 
-        System.out.println("What is the width of the doors in mm?");
-        String doorWidth = reader.next();
-        int doorWidthInt = Integer.parseInt(doorWidth);
+        while (true) {
+            try {
 
-        //Ask the user for the number of rectangular windows and dimensions to find the area
-        System.out.println("What is the total number of rectangular windows in the rooms that need to be painted?");
-        String rectangularWindows = reader.next();
-        int rectangularWindowsInt = Integer.parseInt(rectangularWindows);
+                System.out.println("What is the height of the walls in mm?");
+                wallHeight = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
 
-        System.out.println("What is the height of the rectangular windows in mm?");
-        String rectangularWindowHeight = reader.next();
-        int rectangularWindowHeightInt = Integer.parseInt(rectangularWindowHeight);
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
 
-        System.out.println("What is the width of the rectangular windows in mm?");
-        String rectangularWindowWidth = reader.next();
-        int rectangularWindowWidthInt = Integer.parseInt(rectangularWindowWidth);
+        int wallWidth;
 
-        //Ask the user for the number of circular windows and dimensions to find the area
-        System.out.println("What is the total number of circular windows in the rooms that need to be painted?");
-        String circularWindows = reader.next();
-        int circularWindowsInt = Integer.parseInt(circularWindows);
+        while (true) {
+            try {
 
-        System.out.println("What is the diameter of the circular windows in mm?");
-        String circularWindowDiameter = reader.next();
-        int circularWindowDiameterInt = Integer.parseInt(circularWindowDiameter);
-        float circularWindowRadius = (float) circularWindowDiameterInt / 2;
+                System.out.println("What is the width of the walls in mm?");
+                wallWidth = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        //Ask the user for the number of doors and dimensions, catching any input errors
+        int doors;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the total number of doors in the rooms that need to be painted?");
+                doors = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        int doorHeight;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the height of the doors in mm?");
+                doorHeight = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        int doorWidth;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the width of the doors in mm?");
+                doorWidth = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        //Ask the user for the number of rectangular windows and dimensions, catching any input errors
+        int rectangularWindows;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the total number of rectangular windows in the rooms that need to be painted?");
+                rectangularWindows = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        int rectangularWindowHeight;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the height of the rectangular windows in mm?");
+                rectangularWindowHeight = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        int rectangularWindowWidth;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the width of the rectangular windows in mm?");
+                rectangularWindowWidth = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        //Ask the user for the number of circular windows and dimensions, catching any input errors
+        int circularWindows;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the total number of circular windows in the rooms that need to be painted?");
+                circularWindows = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+        int circularWindowDiameter;
+
+        while (true) {
+            try {
+
+                System.out.println("What is the diameter of the circular windows in mm?");
+                circularWindowDiameter = reader.nextInt();
+                System.out.println("Thank you.");
+                break;
+
+            } catch (InputMismatchException e) {
+                System.out.println("Something went wrong, let's try that again.");
+                reader.nextLine();
+            }
+        }
+
+
+        // Convert the diameter of the window to the radius
+        float circularWindowRadius = (float) circularWindowDiameter / 2;
 
         // Calculate the total area to paint
-        int totalWallArea = rectangularArea(wallHeightInt, wallWidthInt) * wallsInt;
-        int totalDoorArea = rectangularArea(doorHeightInt, doorWidthInt) * doorsInt;
-        int totalRectangularWindowArea = rectangularArea(rectangularWindowHeightInt, rectangularWindowWidthInt) * rectangularWindowsInt;
-        float totalCircularWindowArea = circularArea(circularWindowRadius) * circularWindowsInt;
+        int totalWallArea = rectangularArea(wallHeight, wallWidth) * walls;
+        int totalDoorArea = rectangularArea(doorHeight, doorWidth) * doors;
+        int totalRectangularWindowArea = rectangularArea(rectangularWindowHeight, rectangularWindowWidth) * rectangularWindows;
+        float totalCircularWindowArea = circularArea(circularWindowRadius) * circularWindows;
 
         float totalPaintArea = totalWallArea - totalDoorArea - totalRectangularWindowArea - totalCircularWindowArea;
 
